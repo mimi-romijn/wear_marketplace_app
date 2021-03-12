@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @explore.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @explore.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @explore.price %>
+</p>
+
+<%= link_to 'Edit', edit_explore_path(@explore) %> |
+<%= link_to 'Back', explores_path %>
