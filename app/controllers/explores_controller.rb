@@ -22,6 +22,7 @@ class ExploresController < ApplicationController
   # POST /explores or /explores.json
   def create
     @explore = Explore.new(explore_params)
+    @explore.user = current_user
 
     respond_to do |format|
       if @explore.save
