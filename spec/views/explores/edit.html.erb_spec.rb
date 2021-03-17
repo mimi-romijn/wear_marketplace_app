@@ -2,10 +2,19 @@ require 'rails_helper'
 
 RSpec.describe "explores/edit", type: :view do
   before(:each) do
+    new_user_id = User.new (
+      name: "Jane Doe",
+      email: "janedoe@email.com",
+      password: "Password1"
+    )
+
+    user.save!
+
     @explore = assign(:explore, Explore.create!(
       title: "MyString",
       description: "MyText",
-      price: 1
+      price: 1,
+      user: new_user_id
     ))
   end
 
