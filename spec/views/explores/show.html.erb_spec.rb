@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "explores/show", type: :view do
   before(:each) do
-    new_user_id = User.new (
+    new_user_id = User.new(
       name: "Jane Doe",
       email: "janedoe@email.com",
       password: "Password1"
@@ -23,4 +23,7 @@ RSpec.describe "explores/show", type: :view do
     expect(rendered).to match(/MyText/)
     expect(rendered).to match(/2/)
   end
+
+  # it "renders an image tag"
+  #  if @explore.photo.attached?
 end
