@@ -60,3 +60,4 @@ gem 'devise'
 # add cloudinary gems for image uploading feature
 gem 'cloudinary'
 gem 'activestorage-cloudinary-service'
+
