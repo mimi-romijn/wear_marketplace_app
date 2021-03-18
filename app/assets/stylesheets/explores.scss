@@ -1,3 +1,11 @@
 // Place all the styles related to the explores controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.designer_sewing {
+    display: flex;
+    background-image: url("designer_sewing.jpg");
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}

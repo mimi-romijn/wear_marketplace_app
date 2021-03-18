@@ -2,6 +2,14 @@ require 'rails_helper'
 
 RSpec.describe "explores/show", type: :view do
   before(:each) do
+    new_user_id = User.new (
+      name: "Jane Doe",
+      email: "janedoe@email.com",
+      password: "Password1"
+    )
+
+    new_user_id.save!
+
     @explore = assign(:explore, Explore.create!(
       title: "Title",
       description: "MyText",
