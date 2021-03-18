@@ -7,6 +7,9 @@ RSpec.describe "explores/index", type: :view do
       email: "janedoe@email.com",
       password: "Password1"
     )
+
+    new_user_id.save!
+
     assign(:explores, [
       Explore.create!(
         title: "Title",

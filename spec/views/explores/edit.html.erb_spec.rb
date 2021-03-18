@@ -8,7 +8,7 @@ RSpec.describe "explores/edit", type: :view do
       password: "Password1"
     )
 
-    user.save!
+    new_user_id.save!
 
     @explore = assign(:explore, Explore.create!(
       title: "MyString",

@@ -8,11 +8,15 @@ RSpec.describe Explore, type: :model do
         email: "janedoe@email.com",
         password: "Password1"
       )
-      
+
+      new_user_id.save!
+
       explore = explore.new(
         description: "haute couture",
         price: 20000,
         user: new_user_id
       )
+
+      expect(explore.valid?).to be(false)
     end
 end

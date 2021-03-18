@@ -7,6 +7,9 @@ RSpec.describe "explores/show", type: :view do
       email: "janedoe@email.com",
       password: "Password1"
     )
+
+    new_user_id.save!
+
     @explore = assign(:explore, Explore.create!(
       title: "Title",
       description: "MyText",
