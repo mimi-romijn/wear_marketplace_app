@@ -15,5 +15,14 @@
   <%= @explore.price %>
 </p>
 
+<%if @explore.photo.attached?%>
+  <p>
+    <strong>Photo:</strong>
+    <%= image_tag @explore.photo %>
+  </p>
+
+<%else%>
+<%end%>
+
 <%= link_to 'Edit', edit_explore_path(@explore) %> |
 <%= link_to 'Back', explores_path %>

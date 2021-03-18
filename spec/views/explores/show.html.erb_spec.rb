@@ -23,4 +23,7 @@ RSpec.describe "explores/show", type: :view do
     expect(rendered).to match(/MyText/)
     expect(rendered).to match(/2/)
   end
+
+  # it "renders an image tag"
+  #  if @explore.photo.attached?
 end

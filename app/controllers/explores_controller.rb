@@ -23,6 +23,7 @@ class ExploresController < ApplicationController
   def create
     @explore = Explore.new(explore_params)
     @explore.user = current_user
+    @explore.photo.attach(params[:explore][:photo])
 
     respond_to do |format|
       if @explore.save
