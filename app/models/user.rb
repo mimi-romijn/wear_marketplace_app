@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :explores
+  enum role: {normal: 0, admin: 1}
 end
