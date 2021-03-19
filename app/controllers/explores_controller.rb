@@ -1,5 +1,6 @@
 class ExploresController < ApplicationController
   before_action :set_explore, only: %i[ show edit update destroy ]
+  load_and_authorize_resource
 
   # GET /explores or /explores.json
   def index
