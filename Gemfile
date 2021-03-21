@@ -61,3 +61,5 @@ gem 'devise'
 gem 'cloudinary'
 gem 'activestorage-cloudinary-service'
 
+# add cancancan gem for athorisation/admin account
+gem "cancancan", "~> 3.2"

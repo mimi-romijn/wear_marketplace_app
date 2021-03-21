@@ -19,8 +19,10 @@
         <td><%= explore.description %></td>
         <td><%= explore.price %></td>
         <td><%= link_to 'Show', explore %></td>
+          <% if current_user.role = "admin" %>
         <td><%= link_to 'Edit', edit_explore_path(explore) %></td>
         <td><%= link_to 'Destroy', explore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
