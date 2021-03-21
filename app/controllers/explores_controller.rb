@@ -67,6 +67,6 @@ class ExploresController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def explore_params
-      params.require(:explore).permit(:title, :description, :price, :user_id)
+      params.require(:explore).permit(:title, :description, :price, :user_id, :email, :user)
     end
 end
