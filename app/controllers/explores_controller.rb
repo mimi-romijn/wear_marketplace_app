@@ -23,7 +23,7 @@ class ExploresController < ApplicationController
   # POST /explores or /explores.json
   def create
     @explore = Explore.new(explore_params)
-    @explore.user = current_user
+    @explore.user_id = current_user.id
     @explore.photo.attach(params[:explore][:photo])
 
     respond_to do |format|
@@ -67,6 +67,6 @@ class ExploresController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def explore_params
-      params.require(:explore).permit(:title, :description, :price)
+      params.require(:explore).permit(:title, :description, :price, :user_id)
     end
 end
